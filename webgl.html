@@ -2,7 +2,7 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8" />
-  <title>WebGL Demo</title>
+  <title>Öyakder XR!</title>
   <style>
     :root{
       --bg: #161616;
@@ -17,10 +17,10 @@
       height:100vh; width:100vw; position:relative; overflow:hidden;
       font-family: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Arial, sans-serif;
       color: var(--fg);
-    }
-    .center-canvas{
-      position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
-      display:flex; flex-direction:column; align-items:center; gap:18px;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      flex-direction:column;
     }
     /* Rozet stilleri */
     .badge{ position: relative; width: var(--size); height: var(--size); display: grid; place-items: center; text-decoration: none; user-select: none; -webkit-tap-highlight-color: transparent; }
@@ -39,25 +39,16 @@
     @keyframes slow-rotate { to{ transform: rotate(360deg); } }
     @media (prefers-reduced-motion: reduce){ .badge::before{ animation: none; } }
 
-    /* Footer */
-    .webgl-footer{ position: fixed; left: 20px; bottom: 20px; display:flex; align-items:center; z-index:10; background: rgba(34,34,34,0.85); padding: 8px 18px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.2); }
-    .footer-animation{ position: relative; width:54px; height:54px; margin-right:10px; display:flex; align-items:center; justify-content:center; }
-    .footer-animation svg{ position:absolute; top:0; left:0; animation: rotateCircle 12s linear infinite; opacity:.35; }
-    @keyframes rotateCircle{ 100%{ transform: rotate(360deg);} }
-    .footer-animation img{ height:32px; width:32px; position:absolute; top:11px; left:11px; margin:0; opacity:.9; }
-    .webgl-footer .godot-text{ font-size:1.1em; color:#fff; font-weight:600; margin-right:10px; opacity:.9; }
-    .webgl-footer .webgl-text{ font-size:1.1em; color:#a3cef5; font-weight:600; opacity:.9; }
-
     /* Godot iframe alanı */
     .godot-wrapper{
-      width: min(70vw, 800px);   /* sağ-sol biraz daraltıldı */
+      width: min(70vw, 800px);
       height: min(60vh, 500px);
       border-radius: 12px;
       overflow: hidden;
       box-shadow: 0 10px 30px rgba(0,0,0,.25);
       background:#111;
-      position: relative;        /* buton için */
-      margin: 0 auto;            /* ortalasın */
+      position: relative;
+      margin-top:30px;
     }
     .godot-frame{
       width:100%;
@@ -80,32 +71,41 @@
       transition: background 0.2s;
     }
     .fullscreen-btn:hover{ background: rgba(0,0,0,0.8); }
+
+    /* Footer */
+    .webgl-footer{ position: fixed; left: 20px; bottom: 20px; display:flex; align-items:center; z-index:10; background: rgba(34,34,34,0.85); padding: 8px 18px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.2); }
+    .footer-animation{ position: relative; width:54px; height:54px; margin-right:10px; display:flex; align-items:center; justify-content:center; }
+    .footer-animation svg{ position:absolute; top:0; left:0; animation: rotateCircle 12s linear infinite; opacity:.35; }
+    @keyframes rotateCircle{ 100%{ transform: rotate(360deg);} }
+    .footer-animation img{ height:32px; width:32px; position:absolute; top:11px; left:11px; margin:0; opacity:.9; }
+    .webgl-footer .godot-text{ font-size:1.1em; color:#fff; font-weight:600; margin-right:10px; opacity:.9; }
+    .webgl-footer .webgl-text{ font-size:1.1em; color:#a3cef5; font-weight:600; opacity:.9; }
+
   </style>
 </head>
 <body>
-  <div class="center-canvas">
-    <!-- Rozet -->
-    <a class="badge" href="https://godotengine.org/" target="_blank" title="Godot Engine Resmi Sitesi" aria-label="Yakında">
-      <div class="badge__inner"></div>
-      <div class="badge__gloss"></div>
-      <div class="badge__label">
-        <span>Yakında</span>
-        <span class="badge__sub">Godot • WebGL</span>
-      </div>
-    </a>
 
-    <!-- Godot export (2/Xrp 2.html) -->
-    <div class="godot-wrapper">
-      <iframe
-        src="./2/Xrp%202.html"
-        title="Godot Web Export"
-        class="godot-frame"
-        allow="autoplay; fullscreen"
-        loading="eager"
-        id="godot-frame">
-      </iframe>
-      <button class="fullscreen-btn" id="fsBtn">⛶ Tam Ekran</button>
+  <!-- Rozet -->
+  <a class="badge" href="https://gdquest.github.io/learn-gdscript/" target="_blank" title="Yakında" aria-label="Yakında">
+    <div class="badge__inner"></div>
+    <div class="badge__gloss"></div>
+    <div class="badge__label">
+      <span>Yakında</span>
+      <span class="badge__sub">Godot • WebGL</span>
     </div>
+  </a>
+
+  <!-- Godot WebGL iframe -->
+  <div class="godot-wrapper">
+    <iframe
+      src="https://gdquest.github.io/learn-gdscript/"
+      title="Learn Godot GDScript From Zero"
+      class="godot-frame"
+      allow="autoplay; fullscreen"
+      loading="eager"
+      id="godot-frame">
+    </iframe>
+    <button class="fullscreen-btn" id="fsBtn">⛶ Tam Ekran</button>
   </div>
 
   <!-- Footer -->
@@ -119,7 +119,6 @@
   </div>
 
   <script>
-    // Tam ekran butonu
     const fsBtn = document.getElementById('fsBtn');
     const iframe = document.getElementById('godot-frame');
 
