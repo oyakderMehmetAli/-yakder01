@@ -1,0 +1,479 @@
+<!doctype html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Öyakder XR!</title>
+    <meta name="description" content="Büyük günümüzde sizi yanımızda görmek isteriz.">
+    <meta property="og:title" content="Öyakder XR!">
+    <meta property="og:description" content="Büyük günümüzde sizi yanımızda görmek isteriz.">
+    <meta property="og:image" content="https://wedding.ramswaroop.me/img/hero-min.jpg">
+    <meta property="og:type" content="website">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="manifest" href="manifest.json">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+
+    <script>
+        // load css files from CDN if local node_modules fail
+        function loadCssFromCDN(css) {
+            // create new link tag
+            const link = document.createElement('link');
+            if (css === 'animate.css') {
+                link.href = 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css';
+            } else if (css === 'font-awesome.css') {
+                link.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css';
+            }
+            link.rel = 'stylesheet';
+
+            // add link tag to head section
+            document.getElementsByTagName('head')[0].appendChild(link);
+        }
+
+        // load js files from CDN if local node_modules fail
+        function loadJsFromCDN(js) {
+            if (js === 'waypoints.js') {
+                document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"><\/script>');
+            } else if (js === 'jquery.js') {
+                document.write('<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"><\/script>');
+            }
+        }
+
+        function openSoonPage(e) {
+            e.preventDefault();
+            var win = window.open('', '_blank');
+            win.document.write(`<!DOCTYPE html><html><head><title>Yakında...</title><style>body{background:#fff;margin:0;padding:0;height:100vh;display:flex;align-items:center;justify-content:center;} h1{font-size:6vw;color:#222;font-family:sans-serif;letter-spacing:2px;}</style></head><body><h1>YAKINDA...</h1></body></html>`);
+            win.document.close();
+        }
+    </script>
+
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.css">
+    <link rel="stylesheet" href="css/flexslider.css">
+    <link rel="stylesheet" href="css/styles.min.css">
+    <link rel="stylesheet" href="css/queries.css">
+    <link rel="stylesheet" href="node_modules/animate.css/animate.min.css" onerror="loadCssFromCDN('animate.css')">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" onerror="loadCssFromCDN('font-awesome.css')">
+    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+</head>
+<body id="top">
+<div class="logo" style="position:fixed;top:-20px;right:20px;z-index:9999;"><a href="#"><img src="img/logo.png" alt="Logo" style="width:150px;height:auto;"></a></div>
+<!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+<section class="hero">
+    <section class="navigation">
+        <header>
+            <div class="header-content" style="position:relative;">
+                <div class="header-nav">
+                    <nav>
+                        <ul class="primary-nav">
+                            <li><a href="webgl.html" target="_blank">Fizik</a></li>
+                            <li><a href="webgl.html" target="_blank">Kimya</a></li>
+                            <li><a href="#instagram">Instagram</a></li>
+                            <li><a href="#eng-pics">Proje Fotoğrafları</a></li>
+                            <li class="hidden-sm hidden-xs"><a href="#video-bg">Kimya Labaratuvarı</a></li>
+                        </ul>
+                        <ul class="member-actions">
+                        </ul>
+                    </nav>
+                </div>
+                <div class="navicon">
+                    <a class="nav-toggle" href="#"><span></span></a>
+                </div>
+            </div>
+        </header>
+    </section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="hero-content text-center">
+                    <!--<h1>Ram ve Antara</h1>-->
+                    <img src="img/logo-lg.png">
+                    <!--<p class="intro">Ram & Antara evleniyor!</p>-->
+                    <!--<a href="#" class="btn btn-fill btn-large btn-margin-right">Aşağı Kaydır</a> -->
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4 hidden-xs"></div>
+            <div class="col-sm-4 hidden-xs text-center"><a href="#rsvp"
+                                                           class="btn btn-accent btn-large rsvp-btn">Bize Ulaşın</a></div>
+            <div class="col-sm-4 hidden-xs"></div>
+        </div>
+    </div>
+    <div class="down-arrow floating-arrow"><a href="#invitation"><i class="fa fa-angle-down"></i></a></div>
+</section>
+
+<section id="invitation" class="section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h3>Bilim Yolculuğuna Katılın!</h3>
+                <p>XR ile fizik ve kimya deneyimlerini birlikte keşfediyoruz. Bu etkinlikte, sanal ve artırılmış gerçeklik teknolojileriyle bilimin sınırlarını zorluyor, klasik ders ortamının ötesine geçiyoruz. Katılımcılar, etkileşimli deneyler ve uygulamalar sayesinde hem teorik bilgilerini pekiştiriyor hem de gerçek dünyadaki bilimsel süreçleri daha iyi kavrıyor. Fizik ve kimya alanında yenilikçi öğrenme yöntemleriyle, bilimi eğlenceli ve erişilebilir hale getiriyoruz. Her yaştan katılımcı, kendi ilgi alanına uygun atölyelere katılarak, bilimsel merakını XR teknolojisiyle birleştirme fırsatı bulacak. Siz de bu yolculuğa katılın, öğrenmeyi eğlenceye dönüştürelim ve bilimin geleceğini birlikte şekillendirelim!</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="intro">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h3 class="header">Nasıl Tanıştık?</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 hidden-sm hidden-xs"><img src="img/IMG_2317.jpg" class="wp1"></div>
+            <div class="col-md-6">
+                <p>
+                    Bilim ve teknolojiye olan ortak ilgimiz sayesinde tanıştık. XR projelerinde birlikte çalışırken hem öğrenmeyi hem de eğlenmeyi keşfettik. Her yeni deney, dostluğumuzu ve ekip ruhumuzu daha da güçlendirdi. İlk buluşmamızda, fizik ve kimya alanında yenilikçi fikirlerimizi paylaşırken, XR teknolojisinin eğitimde nasıl devrim yaratabileceğini tartıştık. Zamanla, farklı projelerde birlikte çalışarak hem teorik hem de uygulamalı bilimsel süreçleri deneyimledik. Her birimiz, kendi alanında uzmanlaşırken, ekip olarak birbirimizi tamamladık ve yeni bakış açıları kazandık. XR ile yapılan laboratuvar simülasyonları, sanal deney yarışmaları ve interaktif atölyeler sayesinde, bilimin eğlenceli ve erişilebilir olabileceğini gösterdik. Bu yolculukta, hem dostluklarımızı pekiştirdik hem de bilime olan tutkumuzu daha da büyüttük. Şimdi, bu deneyimleri daha fazla kişiye ulaştırmak için birlikte çalışmaya devam ediyoruz.
+                </p>
+            </div>
+            <div class="col-md-3 hidden-sm hidden-xs"><img src="img/DSD_0214.jpg" class="wp2"></div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4 col-sm-push-2 col-xs-6 hidden-md hidden-lg"><img src="img/IMG_2317.jpg" class="wp8"></div>
+            <div class="col-sm-4 col-sm-push-2 col-xs-6 hidden-md hidden-lg"><img src="img/DSD_0214.jpg" class="wp9"></div>
+        </div>
+    </div>
+</section>
+
+<section class="events section-padding" id="events">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="header">Etkinlikler</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-sm-12 col-xs-12 leftcol">
+                <div class="wp3">
+                    <p><strong>Etkinlik 1</strong></p>
+                    <h5>XR ile Fizik <span class="time">Henüz belirlenmedi</span></h5>
+                    <p>Fizik dersini XR teknolojisiyle deneyimleyin. Sanal ortamda etkileşimli deneyler ve uygulamalar ile fiziği eğlenceli ve anlaşılır hale getiriyoruz.</p>
+                </div>
+                <div class="wp5">
+                    <h5>XR ile Kimya <span class="time">Henüz belirlenmedi</span></h5>
+                    <p>Kimya kavramlarını XR ile keşfedin. Molekülleri ve reaksiyonları sanal ortamda gözlemleyerek kimyayı daha iyi anlayın.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12 col-xs-12 rightcol">
+                <div class="wp4">
+                    <p><strong>Etkinlik 2</strong></p>
+                    <h5>XR ile İlk Deneyler <span class="time">Henüz belirlenmedi</span></h5>
+                    <p>İlk fizik ve kimya deneylerinizi XR ile yapın. Sanal laboratuvarda güvenli ve eğlenceli deneyler sizi bekliyor.</p>
+                </div>
+                <div class="wp6">
+                    <h5>XR ile İlk Deney Yarışmamız <span class="time">Henüz belirlenmedi</span></h5>
+                    <p>Katılımcılar arasında XR ortamında deney yarışması! En yaratıcı ve başarılı deneyleri birlikte seçiyoruz.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row section-padding">
+            <div class="col-md-4 col-md-offset-4 text-center">
+                <a class="btn btn-accent btn-small" data-toggle="modal" data-target="#dc-modal">
+                    <i class="fa fa-barcode"></i>&nbsp;&nbsp;Kıyafet Kodu
+                </a>
+            </div>
+        </div>
+        <!--<div class="row">
+            <div class="col-xs-12 section-border section-padding">
+            </div>
+        </div>-->
+    </div>
+
+    <div id="dc-modal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Kapat"><span>&times;</span>
+                    </button>
+                    <h3 class="text-center section-padding">Kıyafet kodu?</h3>
+                    <h5>Mehndi <span class="time">13:00 - 17:00</span></h5>
+                    <p>
+                        <strong>Geleneksel Hint kıyafetleri</strong>
+                        <br>
+                        Kadınlar <a href="https://www.pinterest.com/ramswarooppatra/mehndi-dress-for-women/">canlı ve parlak</a> renkler giyebilir, erkekler ise <a href="https://www.pinterest.com/ramswarooppatra/mehndi-dress-for-men/">renkli kurtalar</a> ve pantolon/şalvar ile katılabilir.
+                    </p>
+                    <h5>Kokteyl Gecesi <span class="time">19:00 - 00:00</span></h5>
+                    <p>
+                        <strong>Batı tarzı kıyafetler</strong>
+                        <br>
+                        Yarı resmi, modern ve şık bir görünüm en uygunu. Fikirler için <a href="https://www.pinterest.com/ramswarooppatra/cocktail-night-outfit-for-women/">kadınlar</a> ve <a href="https://www.pinterest.com/ramswarooppatra/cocktail-night-outfit-for-men/">erkekler</a> için bağlantılara bakabilirsiniz.
+                    </p>
+                    <h5>Düğün <span class="time">18:00 - 00:00</span></h5>
+                    <p>
+                        <strong>Hint-Batı karışımı</strong>
+                        <br>
+                        Kadınlar sıra dışı sareler, <a href="https://www.pinterest.com/ramswarooppatra/indo-western-lehengas/">lehengalar</a>, <a href="https://www.pinterest.com/ramswarooppatra/indo-western-anarkalis/">anarkaliler</a> ve elbiseler giyebilir. Erkekler ise takım elbise veya sadece ceket giyebilir. Takım elbise sevmeyenler için <a href="https://www.pinterest.com/ramswarooppatra/high-neck-jackets-for-men/">yüksek yakalı yelek ve gömlek</a> kombinleri uygundur.
+                    </p>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+</section>
+
+<section id="instagram" class="section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h3>Bir deney bin formüle bedeldir!</h3>
+                <p>Fizik öğrenmenin en iyi yolu deney yapmaktır. Deneylerinizi ve gözlemlerinizi bizimle paylaşın.</p>
+            </div>
+        </div>
+        <div class="row section-border wp7">
+            <div class="col-md-4 col-md-offset-4">
+                <img src="img/iphone_instagram.jpg">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="eng-pics" class="section-padding">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h3 class="header">Nişan Fotoğrafları</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                <a class="fancybox" rel="group" href="img/eng_pics/_RFX2942-lg.jpg">
+                    <div class="img-wrap">
+                        <div class="overlay">
+                            <i class="fa fa-search"></i>
+                        </div>
+                        <img src="img/eng_pics/_RFX2942-sm.jpg" alt=""/>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-2">
+                <a class="fancybox" rel="group" href="img/eng_pics/IMG_3483-lg.jpg">
+                    <div class="img-wrap">
+                        <div class="overlay">
+                            <i class="fa fa-search"></i>
+                        </div>
+                        <img src="img/eng_pics/IMG_3483-sm.jpg" alt=""/>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-2">
+                <a class="fancybox" rel="group" href="img/eng_pics/_RFX2992-lg.jpg">
+                    <div class="img-wrap">
+                        <div class="overlay">
+                            <i class="fa fa-search"></i>
+                        </div>
+                        <img src="img/eng_pics/_RFX2992-sm.jpg" alt=""/>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-2">
+                <a class="fancybox" rel="group" href="img/eng_pics/_RFX3064-lg.jpg">
+                    <div class="img-wrap">
+                        <div class="overlay">
+                            <i class="fa fa-search"></i>
+                        </div>
+                        <img src="img/eng_pics/_RFX3064-sm.jpg" alt=""/>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-2">
+                <a class="fancybox" rel="group" href="img/eng_pics/NGP_4089-lg.jpg">
+                    <div class="img-wrap">
+                        <div class="overlay">
+                            <i class="fa fa-search"></i>
+                        </div>
+                        <img src="img/eng_pics/NGP_4089-sm.jpg" alt=""/>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-2">
+                <a class="fancybox" rel="group" href="img/eng_pics/NGP_4119-lg.jpg">
+                    <div class="img-wrap">
+                        <div class="overlay">
+                            <i class="fa fa-search"></i>
+                        </div>
+                        <img src="img/eng_pics/NGP_4119-sm.jpg" alt=""/>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row hidden-lg hidden-md hidden-xs">
+            <div class="col-xs-12 section-border section-padding"></div>
+        </div>
+    </div>
+    <!--<div class="row">
+        <div class="col-md-12">
+            <div class="diamond floating-logo">
+                <img src="img/sketch-logo.png" alt="Sketch Logo">
+                <div class="ring"></div>
+            </div>
+        </div>
+    </div>-->
+</section>
+
+<section id="video-bg" class="hidden-sm hidden-xs" style="position:relative;">
+    <div id="bgndVideo" class="player"
+         data-property="{videoURL:'https://www.youtube.com/watch?v=TR1EezbVguk',containment:'#video-bg',autoPlay:true, mute:true, showControls:false, startAt:80, stopAt:259, opacity:1}">
+    </div>
+    <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.35);z-index:2;"></div>
+    <div id="video-content" style="position:relative;z-index:3;">
+        <h5>Kimya</h5>
+        <p>Göründüğü kadar Zor Değil</p>
+    </div>
+</section>
+
+<section id="map" class="section-padding">
+    <div class="text-center">
+        <h3>Nasıl ulaşırım?</h3>
+        <p>Sandığınızdan çok daha kolay!</p>
+    </div>
+    <div id="map-canvas"></div>
+    <div id="map-content-wrapper" class="container pointer-events-none">
+        <div class="row">
+            <div class="col-xs-offset-1 col-xs-10 col-md-offset-3 col-md-6">
+                <div class="text-center">
+                    <div id="btn-show-content" class="toggle-map-content pointer-events-auto">
+                        <i class="fa fa-info-circle"></i>&nbsp;&nbsp; Bilgi Göster
+                    </div>
+                </div>
+                <div id="map-content" class="pointer-events-auto">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <h5>Öyakder</h5>
+                            <p>Öyakder, Tuzluçayır, 06620 Mamak/Ankara</p>
+                        </div>
+                    </div>
+                    <div class="row text-center">
+                        <div class="col-md-12" style="padding: 5px;">
+                            <a class="btn btn-accent btn-small" id="btn-show-map"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;Haritayı Göster</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="rsvp text-center" id="rsvp">
+
+    <div id="rsvp-modal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Kapat"><span>&times;</span>
+                    </button>
+                    <div class="section-padding">
+                        <h3>Teşekkürler!</h3>
+                        <p>Büyük günümüzde bizi yalnız bırakmadığınız için çok mutluyuz.</p>
+                        <div id="add-to-cal"></div>
+                    </div>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <h3>Ne bekliyorsun?</h3>
+                <p>1 Kasım 2025'ten önce katılımınızı bildirirseniz çok seviniriz.</p>
+                <form id="rsvp-form" class="rsvp-form"
+                      action=""
+                      method="POST">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <div class="form-input-group">
+                                <i class="fa fa-envelope"></i><input type="email" name="email" class=""
+                                                                     placeholder="E-posta adresiniz"
+                                                                     required>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <div class="form-input-group">
+                                <i class="fa fa-user"></i><input name="name" class=""
+                                                                 placeholder="Adınız Soyadınız"
+                                                                 required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <div class="form-input-group">
+                                <i class="fa fa-users"></i><input type="number" name="extras" class="" min="0"
+                                                                  max="4"
+                                                                  placeholder="Eşiniz/Çocuklarınız"
+                                                                  required>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <div class="form-input-group">
+                                <i class="fa fa-key"></i><input type="number" name="invite_code" id="invite_code"
+                                                                class="" min="0"
+                                                                placeholder="Davet Kodu"
+                                                                required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12" id="alert-wrapper"></div>
+                    </div>
+                    <button class="btn-fill rsvp-btn">
+                        Evet, katılıyorum!
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center content">
+                <span class="to-top-wrapper"><a href="#top" class="to-top"><i class="fa fa-angle-up"></i></a></span>
+                <p>Mehmet Ali Tarafından <span class="fa fa-heart pulse2"></span>ÖYAKDER'E hazırlandı</p>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="js/vendor/jquery-1.11.2.min.js" onerror="loadJsFromCDN('jquery.js')"></script>
+<script src="node_modules/waypoints/lib/jquery.waypoints.min.js" onerror="loadJsFromCDN('waypoints.js')"></script>
+<script src="js/jquery.fancybox.pack.js"></script>
+<script src="js/vendor/bootstrap.min.js"></script>
+<script src="js/jquery.flexslider-min.js"></script>
+<script src="js/jquery.mb.YTPlayer.min.js"></script>
+<script src="js/vendor/ouical.js"></script>
+<script src="js/scripts.min.js"></script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlPw3GQYI3faa_9mRE6plWuM7xNEmrwH0&callback=initMap"></script>
+<!-- Google Analytics -->
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-46465113-4', 'auto');
+    ga('send', 'pageview');
+</script>
+</body>
+</html>

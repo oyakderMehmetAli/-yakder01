@@ -1,0 +1,26 @@
+{
+  "name": "webgl-game-project",
+  "version": "1.0.0",
+  "description": "A WebGL game project that showcases a simple game built using WebGL.",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "live-server public",
+    "build": "webpack --mode production",
+    "dev": "webpack --mode development"
+  },
+  "keywords": [
+    "webgl",
+    "game",
+    "javascript"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "three": "^0.132.2"
+  },
+  "devDependencies": {
+    "webpack": "^5.64.4",
+    "webpack-cli": "^4.9.1",
+    "live-server": "^1.2.1"
+  }
+}
